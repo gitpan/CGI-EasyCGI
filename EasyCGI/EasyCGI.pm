@@ -27,6 +27,7 @@ sub cgi_request {
     
     if (exists $ENV{REQUEST_METHOD}) {
         if ($ENV{REQUEST_METHOD} eq "GET") {
+            $ENV{"QUERY_STRING"} =~ s/\+/ /g;
             %get_vars = $ENV{"QUERY_STRING"} =~ m/(?:\A|&)([^=]+)=([^&]+)/g;
             $get_vars{Method} = $ENV{REQUEST_METHOD};
             return %get_vars;

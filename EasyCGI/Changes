@@ -9,3 +9,6 @@ Revision history for Perl extension CGI::EasyCGI.
 
 0.4.2 Wed Feb 14 16:25:00 2004
        - amended errors in the documentation again :-)
+       
+0.5.0 Wed Feb 25 20:43:00 2004
+      - fixed error in query string retrieval for values containing spaces
