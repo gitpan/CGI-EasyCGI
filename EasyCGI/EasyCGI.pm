@@ -1,7 +1,7 @@
 #------------------------------------------------------------------------------- 
 # 
 # File: pk_cgi.pm
-# Version: 0.4
+# Version: 0.4.2
 # Author: Jeremy Wall
 # Definition: Contains all the code to handle working in the CGI environment.
 #             This includes building a page for transmitting to a browser,
@@ -13,7 +13,7 @@ package EasyCGI;
 require Exporter;
 use strict;
 
-my $VERSION = 0.40;
+my $VERSION = 0.4.2;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(cgi_request get_cookie_list get_cookie);
@@ -229,18 +229,19 @@ for those times when you don't want or need the swiss army knife of cgi modules.
 
 =head1 Synopsis
     
-use ;
+use CGI::EasyCGI;
     
 my $Page =  EasyCGI->new_page("html");
     
 my $Cookie = {Name => "pklogin", Value => {UserName => $Self->{Env}{username}, Password => $Self->{Env}{password}};
 $Page->add_cookie($Cookie);
     
-%PKEnv = pk_cgi::cgi_request() 
+%PKEnv = EasyCGI::cgi_request() 
        or die "No Http Environment";
     
-%Cookies = pk_cgi::get_cookie_list()
-        or die "no cookies";  
+%Cookies = EasyCGI::get_cookie_list()
+        or die "no cookies";
+          
 $SomeCookie = $Cookies{SomeCookieName};
 $SomeCookieValue = $$SomeCookie(SomeCookieVariable};
          

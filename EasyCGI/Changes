@@ -4,5 +4,8 @@ Revision history for Perl extension CGI::EasyCGI.
 	- original version; created by h2xs 1.22 with options
 		-X -n CGI::EasyCGI
 
-.0.4.1 Wed Feb 14 16:25:00 2004
+0.4.1 Wed Feb 14 16:25:00 2004
        - amended errors in the documentation
+
+0.4.2 Wed Feb 14 16:25:00 2004
+       - amended errors in the documentation again :-)
