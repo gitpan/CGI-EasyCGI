@@ -224,14 +224,14 @@ return 1;
 
 =head1 Name
 
-cgi::pk_cgi - Lightweight Perl module for handling the most common CGI functions. Simple to use, single file with no dependencies, and short learning curve
+CGI::EasyCGI - Lightweight Perl module for handling the most common CGI functions. Simple to use, single file with no dependencies, and short learning curve
 for those times when you don't want or need the swiss army knife of cgi modules.
 
 =head1 Synopsis
     
-use cgi::pk_cgi;
+use ;
     
-my $Page = pk_cgi->new_page("html");
+my $Page =  EasyCGI->new_page("html");
     
 my $Cookie = {Name => "pklogin", Value => {UserName => $Self->{Env}{username}, Password => $Self->{Env}{password}};
 $Page->add_cookie($Cookie);
@@ -334,7 +334,7 @@ cannot be changed and no more cookies can be set.
 
 =head1 Version
 
-0.4
+0.4.1
 Written 02-04-2004
 
 =head1 Author
@@ -349,11 +349,11 @@ it under the same terms as Perl itself.
 This script requires the C<strict> module.
 It also requires the C<Exporter> nmodule
  
-=pod OSNAMES
+=head1 OSNAMES
 
 Any
 
-=pod SCRIPT CATEGORIES
+=head1 SCRIPT CATEGORIES
 
 CGI
 
